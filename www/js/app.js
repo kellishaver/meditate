@@ -226,13 +226,13 @@
     seconds = secLeft % 60;
     $('#timer .minutes').text(minutes);
     $('#timer .seconds').text(formatDigit(seconds));
-    playSound(0.5);
+    playSound('0.25');
     return delayTimer = setTimeout(function() {
       return interval = setInterval(function() {
         delayTimer = null;
         if (secLeft > 0) {
           if (secLeft === goal * 60) {
-            playSound(1);
+            playSound('0.75');
           }
           if (seconds === 0) {
             minutes = minutes - 1;
@@ -242,7 +242,7 @@
           }
           secLeft = secLeft - 1;
           if (secLeft === 0) {
-            playSound(1);
+            playSound('0.75');
           }
           $('#timer').data('sec_left', secLeft);
           $('#timer .minutes').text(minutes);
