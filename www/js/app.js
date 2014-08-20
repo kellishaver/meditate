@@ -103,11 +103,11 @@
 
   playSound = function(vol) {
     var ding = new Media('/android_asset/www/audio/ding.mp3', function() {
+      console.log('play audio');
       ding.play();
-    }, function() {
-      console.log("error");
+    }, function(error) {
+      console.log(error);
     });
-    console.log('phonegap audio');
   };
 
   saveMeditation = function(goal, duration) {
