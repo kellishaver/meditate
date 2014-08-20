@@ -103,14 +103,15 @@
 
   playSound = function(vol) {
     try {
-      ding = new Media('/android_asset/www/audio/ding.mp3', function() {
+      ding = new Media('./audio/ding.mp3', function() {
         ding.play();
       }, function() {
         console.log("error");
       });
+      console.log('phonegap audio');
     } catch (e) {
-      console.log(e)
-      ding = new Audio('/android_asset/www/audio/ding.mp3');
+      console.log('html5 audio');
+      ding = new Audio('./audio/ding.mp3');
       ding.play();
     }
   };
