@@ -102,18 +102,12 @@
   };
 
   playSound = function(vol) {
-    try {
-      ding = new Media('./audio/ding.mp3', function() {
-        ding.play();
-      }, function() {
-        console.log("error");
-      });
-      console.log('phonegap audio');
-    } catch (e) {
-      console.log('html5 audio');
-      ding = new Audio('./audio/ding.mp3');
+    var ding = new Media('/android_asset/www/audio/ding.mp3', function() {
       ding.play();
-    }
+    }, function() {
+      console.log("error");
+    });
+    console.log('phonegap audio');
   };
 
   saveMeditation = function(goal, duration) {
