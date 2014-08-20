@@ -1,0 +1,301 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+::-moz-selection {
+  background: #444;
+  color: #fff;
+  text-shadow: none; }
+
+::selection {
+  background: #444;
+  color: #fff;
+  text-shadow: none; }
+
+a {
+  color: #777;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+  -o-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0);
+  text-decoration: none; }
+
+a:hover {
+  color: #444; }
+
+.align-center {
+  text-align: center; }
+
+.align-right {
+  text-align: right; }
+
+.align-left {
+  text-align: left; }
+
+body {
+  font-family: -apple-system-font, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  line-height: 150%;
+  overflow-x:hidden;
+  margin: 0; }
+
+footer, header, nav, section {
+  display: block; }
+
+fieldset, img {
+  border: none; }
+
+form, legend, li {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 100%;
+  margin: 0 0 0.5em 0;
+  padding: 0; }
+
+h1 {
+  font-size: 200%; }
+
+h2 {
+  font-size: 180%; }
+
+h3 {
+  font-size: 160%; }
+
+h4 {
+  font-size: 140%; }
+
+h5 {
+  font-size: 120%; }
+
+h6 {
+  font-size: 100%; }
+
+.hidden {
+  display: none; }
+
+hr {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  height: 0;
+  margin: 3em 0; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  height: 100%; }
+
+i {
+  color: #444; }
+
+input, select, textarea {
+  color: #444;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 0.8em; }
+
+p {
+  margin: 0 0 1em 0; }
+
+small {
+  font-size: 70%; }
+
+ul, ol {
+  margin: 0 0 1em 0;
+  padding: 0 0 0 2em; }
+
+body {
+  background-attachment: fixed;
+  background-color: #000;
+  background-position: 50% 50%;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #000; }
+
+h3 {
+  border-bottom: 1px solid #fff;
+  font-weight: normal;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  text-align: center; }
+
+#container {
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%; }
+
+#screen {
+  bottom: 0;
+  max-width: 600px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  position: absolute;
+  width: 100%;
+  top: 0; }
+  #screen > div {
+    height: 100%;
+    padding: 2em; }
+
+#overview ul {
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+  #overview ul li {
+    background: #000;
+    color: #fff;
+    display: inline-block;
+    font-size: 13px;
+    height: 100px;
+    line-height: 13px;
+    list-style: none;
+    margin: 1em;
+    overflow: hidden;
+    padding: 1.5em 0 0 0;
+    text-align: center;
+    width: 100px; }
+    #overview ul li a, #overview ul li a:hover {
+      color: #fff; }
+    #overview ul li span {
+      display: block;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 30px; }
+#overview #photo-credit {
+  bottom: 0;
+  color: #fff;
+  left: 0;
+  padding: 0.5em;
+  position: absolute;
+  text-align: center;
+  width: 100%; }
+
+#history, #instructions {
+  background: #000;
+  color: #fff;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch; }
+  #history .back, #instructions .back {
+    border: 1px solid #fff;
+    color: #fff;
+    display: inline-block;
+    margin-top: 2em;
+    padding: 0.5em 2em; }
+    #history .back:hover, #instructions .back:hover,
+    #history .back.active, #instructions .back.active {
+      background: #fff;
+      color: black; }
+
+#history ul {
+  margin: 0;
+  padding: 0; }
+  #history ul li {
+    background: #222;
+    border-bottom: 2px solid #000;
+    list-style: none;
+    margin: 0;
+    padding: 0.5em 1em; }
+    #history ul li strong {
+      display: block; }
+      #history ul li strong time {
+        font-style: normal; }
+    #history ul li.complete {
+      border-left: 5px solid #0a0; }
+    #history ul li.incomplete {
+      border-left: 5px solid #a00; }
+#history .clear {
+  color: #aaa;
+  display: inline-block;
+  float: right;
+  font-weight: normal;
+  margin-top: 2em;
+  padding: 0.5em 0; }
+  #history .clear:hover,
+  #history .clear.active {
+    color: #fff; }
+
+#new-meditation {
+  background: #000;
+  color: #fff;
+  display: block;
+  margin: 3em auto 0 auto;
+  max-width: 300px;
+  padding: 1em;
+  text-align: center;
+  width: 100%; }
+  #new-meditation .time-controls {
+    height: 40px;
+    line-height: 40px; }
+    #new-meditation .time-controls a, #new-meditation .time-controls div {
+      color: #fff;
+      display: inline-block;
+      font-size: 20px;
+      font-weight: bold;
+      height: 40px;
+      line-height: 40px;
+      text-align: center; }
+    #new-meditation .time-controls a {
+      width: 40px; }
+    #new-meditation .time-controls #current-goal {
+      background: #333;
+      width: 160px; }
+      #new-meditation .time-controls #current-goal:after {
+        content: " minutes"; }
+  #new-meditation .start {
+    border: 1px solid #fff;
+    color: #fff;
+    display: inline-block;
+    margin: 1em 0 0 0;
+    padding: 0.25em 1em; }
+    #new-meditation .start:hover,
+    #new-meditation .start.active {
+      background: #fff;
+      color: black; }
+
+#session .message {
+  background: #000;
+  color: #fff;
+  padding: 0.5em;
+  text-align: center; }
+#session .cancel {
+  background: #000;
+  border: 1px solid #000;
+  bottom: 2em;
+  color: #fff;
+  display: inline-block;
+  left: 50%;
+  margin-left: -70px;
+  padding: 0.25em 1em;
+  position: absolute;
+  text-align: center;
+  width: 120px; }
+  #session .cancel:hover,
+  #session .cancel.active {
+    background: #a00; }
+
+#timer {
+  background: #000;
+  border: 1px solid #aaa;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  color: #fff;
+  display: block;
+  font-size: 30px;
+  height: 160px;
+  line-height: 30px;
+  margin: -80px 0 0 -80px;
+  left: 50%;
+  padding-top:65px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 160px; }
+  #timer.active {
+    background:#333; }

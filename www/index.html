@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meditate</title>
+    <link rel="stylesheet" href="./css/app.css"></link>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="prefetch" href="/audio/ding.mp3" />
+</head>
+<body>
+    <div id="container">
+      <div id="screen"></div>
+    </div>
+    <script type="text/template" id="meditation-overview-tpl">
+      <div id="overview">
+        <ul>
+          <li><span>{{total}}</span>meditations<br>logged</li>
+          <li><span>{{average}}</span>minutes<br>average</li>
+          <li><a href="" class="help"><span>?</span>help &amp;<br>instructions</a></li>
+          <li><a href="" class="history"><span><img src="./img/yinyang.png" width="24" height="24" /></span>View<br>history</a></li>
+        </ul>
+        <div id="new-meditation">
+          <div class="time-controls">
+            <a class="down" href="">&ndash;</a>
+            <div id="current-goal">{{last_goal}}</div>
+            <a class="up" href="">+</a>
+          </div>
+          <a class="start" href="">New Meditation</a>
+        </div>
+        <div id="photo-credit">photo by Trey Ratcliff</div>
+      </div>
+    </script>
+
+    <script type="text/template" id="meditation-session-tpl">
+      <div id="session">
+        <div class="message">tap timer to start, pause, or resume</div>
+        <a href="" id="timer" data-goal="{{goal}}" data-sec_left="{{sec_left}}">
+          <span class="minutes">{{goal}}</span>:<span class="seconds">00</span>
+        </a>
+        <a class="cancel" href="">cancel</a>
+      </div>
+    </script>
+
+    <script type="text/template" id="instructions-tpl">
+      <div id="instructions">
+        <h3>Instructions</h3>
+        <p>From the overview screen, set your meditation time and then click "New Meditation." Once you're ready to begin, click the timer.<p>
+        <p>At this point, you'll hear a chime indicating that you should prepare to meditate. 20 seconds later, you will hear the chime again, signaling the beginning of your meditation.</p>
+        <p>Finally, the chime will play for a third time at the end of your meditation.</p>
+        <p>You can click the timer at any time once the app has started counting down to pause or resume your meditation. Clicking the "cancel" button stops the meditaiton.</p>
+        <p><a href="" class="back">Back</a></p>
+      </div>
+    </script>
+
+    <script type="text/template" id="meditation-history-tpl">
+      <div id="history">
+        <h3>History</h3>
+        <ul>
+          {{meditations}}
+            <li class="{{if complete}}complete{{else}}incomplete{{/if}}">
+              {{if complete}}
+                <strong>{{goal}} minutes</strong>
+              {{else}}
+                <strong>{{duration}} of {{goal}} minutes</strong>
+              {{/if}}
+              <time>{{date}}</time>
+            </li>
+          {{/meditations}}
+        </ul>
+        <p><a href="" class="back">Back</a><a href="" class="clear">clear history</a></p>
+      </div>
+    </script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="./js/fast-active.js"></script>
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/markup.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+</body>
+</html>
