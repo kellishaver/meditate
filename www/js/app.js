@@ -104,12 +104,13 @@
   playSound = function(vol) {
     var ding = new Media('/android_asset/www/audio/ding.mp3',
       function() {
-          console.log("playAudio():Audio Success");
+        // ...
       },
       function(err) {
-          console.log("playAudio():Audio Error: "+err);
+        // ...
       }
     );
+    ding.setVolume(vol);
     ding.play();
   };
 
@@ -225,7 +226,7 @@
     seconds = secLeft % 60;
     $('#timer .minutes').text(minutes);
     $('#timer .seconds').text(formatDigit(seconds));
-    playSound(0.25);
+    playSound(0.5);
     return delayTimer = setTimeout(function() {
       return interval = setInterval(function() {
         delayTimer = null;
